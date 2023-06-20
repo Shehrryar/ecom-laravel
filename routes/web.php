@@ -1,10 +1,8 @@
 <?php
 
-use App\Http\Controllers\baldecontroller;
-use App\Http\Controllers\UserControl;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\htmlformcontroller;
-
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\proiductcontroller;
 /*
 
 |--------------------------------------------------------------------------
@@ -17,6 +15,9 @@ use App\Http\Controllers\htmlformcontroller;
 |
 */
 
-Route::get('/', function () {
+Route::get('login', function () {
     return view('login');
 });
+
+Route::post("/login", [UserController::class, 'login']);
+Route::get("/", [proiductcontroller::class, 'index']);
