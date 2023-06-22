@@ -22,5 +22,11 @@
    .custom-login{
      padding-top: 100px;
    }
+   img.slider-img{
+      height: 300px !important;
+   }
+   .slider-text{
+      background-color: #225f7854;
+   }
 </style>
 </html>
