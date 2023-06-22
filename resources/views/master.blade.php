@@ -28,5 +28,23 @@
    .slider-text{
       background-color: #225f7854;
    }
+   .trending-img{
+      height: 100px;
+   }
+   .trending-item{
+      float: left;
+      width: 20%;
+   }
+   .trending-block{
+      margin-left: 2%;
+      margin-right: 2%; 
+   }
+   .detail-img{
+      height: 250px;
+   }
+   .search-box{
+      width: 500px !important;
+
+
 </style>
 </html>

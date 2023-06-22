@@ -13,9 +13,9 @@
         </li>
 
   <li class="nav-item">
-      <form action="">
-        <input class="mr-sm-2" type="search" placeholder="Search">
-        <button class="btn btn-sucess">search</button>
+      <form action="/search">
+        <input name="query" class="mr-sm-2 search-box" type="search" placeholder="Search">
+        <button class="btn btn-sucess">Search</button>
       </form>
     </li>
       <li class="nav-item" id="movelast">
