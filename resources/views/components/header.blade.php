@@ -1,5 +1,14 @@
+
+@php
+    use App\Http\Controllers\proiductcontroller;
+    $total = 0;
+    if (Session::has('user')){
+    $total = proiductcontroller::cartitem();
+    }
+@endphp
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Ecom</a>
+    <a class="navbar-brand" href="/">Ecom</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,8 +28,22 @@
       </form>
     </li>
       <li class="nav-item" id="movelast">
-        <a class="nav-link" href="#">Add to Cart</a>
+        <a class="nav-link" href="#">Cart {{$total}}</a>
       </li>
+      @if (Session::has('user'))
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{SESSION::get('user')['name']}}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="\logout">Logout</a></li>
+          </ul>
+        </li>
+      @else
+        <li class="my-2 mx-4">
+          <a href="login">Login</a>
+        </li>
+      @endif
     </ul>
     </div>
   </nav>
