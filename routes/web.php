@@ -29,3 +29,8 @@ Route::get("/", [proiductcontroller::class, 'index']);
 Route::get("detail/{id}", [proiductcontroller::class, 'detail']);
 Route::get("search", [proiductcontroller::class, 'search']);
 Route::post("add_to_cart", [proiductcontroller::class, 'addtocart']);
+Route::get("cartlist", [proiductcontroller::class, 'cartlist']);
+Route::get("removecart/{id}", [proiductcontroller::class, 'removecart']);
+Route::get("ordernow", [proiductcontroller::class, 'ordernow']);
+Route::post("orderplace", [proiductcontroller::class, 'orderplace']);
+Route::get("myorder", [proiductcontroller::class, 'myorder']);

@@ -18,7 +18,7 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Orders</a>
+          <a class="nav-link" href="myorder">Orders</a>
         </li>
 
   <li class="nav-item">
@@ -28,7 +28,7 @@
       </form>
     </li>
       <li class="nav-item" id="movelast">
-        <a class="nav-link" href="#">Cart {{$total}}</a>
+        <a class="nav-link" href="cartlist">Cart {{$total}}</a>
       </li>
       @if (Session::has('user'))
         <li class="nav-item dropdown">
